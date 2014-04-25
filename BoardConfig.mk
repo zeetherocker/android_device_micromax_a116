@@ -34,6 +34,7 @@ TARGET_POWERHAL_VARIANT := cm
 
 # boot
 TARGET_NO_BOOTLOADER := true
+TARGET_NO_RADIOIMAGE := true
 BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_FOLDER)/boot.mk
 
 # EGL settings
@@ -42,6 +43,8 @@ USE_OPENGL_RENDERER := true
 BOARD_EGL_WORKAROUND_BUG_10194508 := true
 
 # kernel
+TARGET_KERNEL_SOURCE := kernel/micromax/a116
+TARGET_KERNEL_CONFIG := a116-config
 TARGET_PREBUILT_KERNEL := $(DEVICE_FOLDER)/prebuilt/kernel
 
 # partition info
@@ -64,4 +67,4 @@ BOARD_WPA_SUPPLICANT_DRIVER := NL80211
 BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_mtk
 
 # telephony
-#BOARD_RIL_CLASS := ../../../device/micromax/a116/ril/
+BOARD_RIL_CLASS := ../../../device/micromax/a116/ril/com/android/internal/telephony/MediaTekRIL.java
